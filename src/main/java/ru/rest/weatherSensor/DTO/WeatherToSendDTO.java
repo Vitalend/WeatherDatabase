@@ -3,17 +3,17 @@ package ru.rest.weatherSensor.DTO;
 import java.time.LocalDateTime;
 
 public class WeatherToSendDTO {
-    private int value;
+    private double value;
     private Boolean raining;
     private String sensor;
 
     private LocalDateTime measurementTime;
 
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(double value) {
         this.value = value;
     }
 
@@ -41,11 +41,4 @@ public class WeatherToSendDTO {
         this.measurementTime = measurementTime;
     }
 
-    public WeatherToSendDTO(int value, Boolean raining, String sensor, LocalDateTime measurementTime) {
-        this.value = value;
-        this.raining = raining;
-        this.sensor = sensor;
-        this.measurementTime = measurementTime;
-    }
-    public WeatherToSendDTO (){}
 }

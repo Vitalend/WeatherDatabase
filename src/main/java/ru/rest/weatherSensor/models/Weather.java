@@ -14,7 +14,7 @@ public class Weather {
     private int id;
 
     @Column(name = "value")
-    private int value;
+    private Integer value;
 
     @Column(name = "raining")
     private Boolean raining;
@@ -25,7 +25,7 @@ public class Weather {
     @Column(name = "measurement_time")
     private LocalDateTime measurementTime;
 
-    public Weather(int value, Boolean raining, String sensor,LocalDateTime measurementTime) {
+    public Weather(Integer value, Boolean raining, String sensor,LocalDateTime measurementTime) {
         this.value = value;
         this.raining = raining;
         this.sensor = sensor;
@@ -42,11 +42,11 @@ public class Weather {
         this.id = id;
     }
 
-    public int getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 

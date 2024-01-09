@@ -8,9 +8,11 @@ import jakarta.validation.constraints.NotNull;
 
 public class WeatherDTO {
 
+
+    @NotNull(message = "Should not be empty")
     @Min(value = -100, message = "The temperature is to low")
     @Max(value = 100, message = "The temperature is to hi")
-    private int value;
+    private Integer value;
 
     @NotNull(message = "Should not be empty")
     private Boolean raining;
@@ -18,11 +20,11 @@ public class WeatherDTO {
     @NotEmpty(message = "Should not be empty")
     private String sensor;
 
-    public int getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 
